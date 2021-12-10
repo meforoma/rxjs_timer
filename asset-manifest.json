@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/rxjs_timer/static/css/main.645558d6.chunk.css",
-    "main.js": "/rxjs_timer/static/js/main.cbc9b3db.chunk.js",
-    "main.js.map": "/rxjs_timer/static/js/main.cbc9b3db.chunk.js.map",
+    "main.js": "/rxjs_timer/static/js/main.3ef393df.chunk.js",
+    "main.js.map": "/rxjs_timer/static/js/main.3ef393df.chunk.js.map",
     "runtime-main.js": "/rxjs_timer/static/js/runtime-main.81e185d8.js",
     "runtime-main.js.map": "/rxjs_timer/static/js/runtime-main.81e185d8.js.map",
-    "static/js/2.0f82cadf.chunk.js": "/rxjs_timer/static/js/2.0f82cadf.chunk.js",
-    "static/js/2.0f82cadf.chunk.js.map": "/rxjs_timer/static/js/2.0f82cadf.chunk.js.map",
+    "static/js/2.bdd45b28.chunk.js": "/rxjs_timer/static/js/2.bdd45b28.chunk.js",
+    "static/js/2.bdd45b28.chunk.js.map": "/rxjs_timer/static/js/2.bdd45b28.chunk.js.map",
     "index.html": "/rxjs_timer/index.html",
     "static/css/main.645558d6.chunk.css.map": "/rxjs_timer/static/css/main.645558d6.chunk.css.map",
-    "static/js/2.0f82cadf.chunk.js.LICENSE.txt": "/rxjs_timer/static/js/2.0f82cadf.chunk.js.LICENSE.txt"
+    "static/js/2.bdd45b28.chunk.js.LICENSE.txt": "/rxjs_timer/static/js/2.bdd45b28.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.81e185d8.js",
-    "static/js/2.0f82cadf.chunk.js",
+    "static/js/2.bdd45b28.chunk.js",
     "static/css/main.645558d6.chunk.css",
-    "static/js/main.cbc9b3db.chunk.js"
+    "static/js/main.3ef393df.chunk.js"
   ]
 }
