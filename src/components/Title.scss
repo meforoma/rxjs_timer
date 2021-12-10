@@ -1,0 +1,13 @@
+
+.title {
+  &__container {
+    margin: 6px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}
