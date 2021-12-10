@@ -21,11 +21,11 @@ export const Controls = ({
       name="button--pause"
       className="controls__button controls__button--pause"
       disabled={!running}
-      onDoubleClick={doPause}
+      onClick={() => doPause()}
     >
       ⏸️ Pause
       <br />
-      (double-click)
+      (triple-click)
     </button>
 
     <button

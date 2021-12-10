@@ -1,11 +1,12 @@
 import './App.css';
 import React, { useState } from 'react';
 import {
-  interval, Subject,
+  interval, Subject, fromEvent
 } from 'rxjs';
 import {
   scan, tap, startWith,
   takeUntil,
+  buffer, debounceTime, map, filter
 } from 'rxjs/operators';
 
 import { Title } from './components/Title';
@@ -47,30 +48,23 @@ export const App = () => {
     setRunning(true);
   };
 
-  const doPause = () => {
-    timerStopObserve.next(false);
-    setRunning(false);
-  };
-
-  /* // # [failed] attempt to emulate double-click with required delay:
   const doPause = (timeToDoubleClick = 300) => {
     const buttonPause = document.querySelector('.controls__button--pause');
     const click = fromEvent(buttonPause, 'click');
 
     const doubleClick = click
       .pipe(
-        buffer(click.pipe(debounce(timeToDoubleClick))),
+        buffer(click.pipe(debounceTime(timeToDoubleClick))),
         map(e => e.length),
-        filter(clicks => clicks === 2)
+        filter(clicks => clicks === 3)
       );
 
     doubleClick.subscribe(result => {
-      console.log('double clicked', result);
+      console.log('double clicked', result, 'debounceTime = ', timeToDoubleClick);
       timerStopObserve.next(false);
       setRunning(false);
     });
   };
-  */
 
   return (
     <container>
