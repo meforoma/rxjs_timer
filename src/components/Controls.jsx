@@ -4,7 +4,7 @@ import './Controls.scss';
 
 export const Controls = ({
   doStart, doStop,
-  doRestart, doPause,
+  doRestart, doWait,
   running
 }) => (
   <div className="controls__container">
@@ -18,14 +18,14 @@ export const Controls = ({
 
     <button
       type="button"
-      name="button--pause"
-      className="controls__button controls__button--pause"
+      name="button--wait"
+      className="controls__button controls__button--wait"
       disabled={!running}
-      onClick={() => doPause()}
+      onClick={() => doWait()}
     >
-      ⏸️ Pause
+      ⏸️ Wait
       <br />
-      (triple-click)
+      (double-click)
     </button>
 
     <button

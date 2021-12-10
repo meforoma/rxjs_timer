@@ -48,18 +48,18 @@ export const App = () => {
     setRunning(true);
   };
 
-  const doPause = (timeToClick = 300) => {
-    const buttonPause = document.querySelector('.controls__button--pause');
-    const click = fromEvent(buttonPause, 'click');
+  const doWait = (timeToClick = 300) => {
+    const buttonWait = document.querySelector('.controls__button--wait');
+    const click = fromEvent(buttonWait, 'click');
 
-    const tripleClick = click
+    const waitClick = click
       .pipe(
         buffer(click.pipe(debounceTime(timeToClick))),
         map(e => e.length),
-        filter(clicks => clicks === 3)
+        filter(clicks => clicks === 2)
       );
 
-    tripleClick.subscribe(result => {
+    waitClick.subscribe(result => {
       console.log('triple click: ', result, 'debounceTime = ', timeToClick);
       timerStopObserve.next(false);
       setRunning(false);
@@ -77,7 +77,7 @@ export const App = () => {
           doStart={doStart}
           doStop={doStop}
           doRestart={doRestart}
-          doPause={doPause}
+          doWait={doWait}
           running={running}
         />
       </div>
