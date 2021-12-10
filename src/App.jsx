@@ -48,19 +48,19 @@ export const App = () => {
     setRunning(true);
   };
 
-  const doPause = (timeToDoubleClick = 300) => {
+  const doPause = (timeToClick = 300) => {
     const buttonPause = document.querySelector('.controls__button--pause');
     const click = fromEvent(buttonPause, 'click');
 
-    const doubleClick = click
+    const tripleClick = click
       .pipe(
-        buffer(click.pipe(debounceTime(timeToDoubleClick))),
+        buffer(click.pipe(debounceTime(timeToClick))),
         map(e => e.length),
         filter(clicks => clicks === 3)
       );
 
-    doubleClick.subscribe(result => {
-      console.log('double clicked', result, 'debounceTime = ', timeToDoubleClick);
+    tripleClick.subscribe(result => {
+      console.log('triple click: ', result, 'debounceTime = ', timeToClick);
       timerStopObserve.next(false);
       setRunning(false);
     });
